@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/*******.js" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!--サクセスメッセージ-->
+    <% if flash[:success1] %>
+      <div class="flash">
+        <%= flash[:success1] %>
+      </div>
+    <% end %>
+    <% if flash[:success2] %>
+      <div class="flash">
+        <%= flash[:success2] %>
+      </div>
+    <% end %>
+    <% if flash[:success3] %>
+      <div class="flash">
+        <%= flash[:success3] %>
+      </div>
+    <% end %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
